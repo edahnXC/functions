@@ -9,7 +9,7 @@
 # print(transpose)
 def hello_func():     #make our code more concise
     return 'hello om.'
-print(len('Test'))
+print(hello_func().upper())
 
 #using function help us to keep our code DRY(Don't Repeat Yourself)
 #x='global x'
@@ -21,5 +21,19 @@ def test(z):
 test('local z')
 
 # print(dir(__builtins__))
+
+def hello(greeting, name=input("Enter your name: ")):
+    return "{}, {}".format(greeting,name)
+
+print(hello("hello"))
+
+#positional keyword
+def student_info(*subject, **names):
+    print(subject)
+    print(names)
+courses=('Math', 'Art')
+info={'name': 'Rahul', 'age': 19}
+
+student_info(*courses, **info)
 
 
